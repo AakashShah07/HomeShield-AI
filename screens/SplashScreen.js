@@ -28,7 +28,7 @@ const SplashScreen = ({ navigation }) => {
    useEffect(() => {
     const timer = setTimeout(() => {
       navigation.replace('Login'); // Go to Login after 2 seconds
-    }, 2000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [navigation]);
@@ -45,7 +45,7 @@ const SplashScreen = ({ navigation }) => {
         }),
         Animated.timing(shieldPulse, {
           toValue: 1,
-          duration: 2000,
+          duration: 2200,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: true,
         }),
@@ -58,13 +58,13 @@ const SplashScreen = ({ navigation }) => {
       Animated.sequence([
         Animated.timing(glowOpacity, {
           toValue: 0.8,
-          duration: 3000,
+          duration: 2200,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: true,
         }),
         Animated.timing(glowOpacity, {
           toValue: 0.3,
-          duration: 3000,
+          duration: 2200,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: true,
         }),
@@ -75,7 +75,7 @@ const SplashScreen = ({ navigation }) => {
     const rotateAnimation = Animated.loop(
       Animated.timing(loadingRotation, {
         toValue: 1,
-        duration: 4000,
+        duration: 1000,
         easing: Easing.linear,
         useNativeDriver: true,
       })
@@ -90,7 +90,7 @@ const SplashScreen = ({ navigation }) => {
     setTimeout(() => {
       Animated.timing(homeOpacity, {
         toValue: 1,
-        duration: 2000,
+        duration: 100,
         easing: Easing.out(Easing.ease),
         useNativeDriver: true,
       }).start();
